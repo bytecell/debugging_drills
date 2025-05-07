@@ -8,7 +8,7 @@ def fibonacci(n, memo={}):
     elif n == 1:
         return 1
     else:
-        memo[n] = fibonacci(n-1) + fibonacci(n-2)
+        memo[n] = fibonacci(n-1, memo) + fibonacci(n-2, memo)
         return memo[n]
 
 print(fibonacci(10))
